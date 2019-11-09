@@ -13,7 +13,7 @@ The last bullet is not neede to be able to build the example, it is to set up a 
 Also download and build [![libopencm3](https://github.com/libopencm3/libopencm3)].
 
 ## Building and flashing
-Go into the example directory:
+Go into the example directory. This is a quick and ugly makefile to demonstrate this example so it does not contain any fancy stuff in it so you have to go into the makefile and make sure that LIBDIR and INCDIR points to your compiled libopencm3. After that you can build the example and flash the Bluepill.
 
   $ cd stm32f1_bluepill
   $ make
@@ -24,3 +24,4 @@ Plug in the ST-Link:
   
 Remove the ST-Link and plug in the Bluepill to the PC via the USB port and open up a serial terminal (e.g. minicom) for **/dev/ttyACM0** and you should se a welcome message and a prompt to enter something ending with a carriage return. The example will echo back what is typed in and will echo the line after you hit carriage return.
 
+sudo apt-get install openocd gdb-multiarch
