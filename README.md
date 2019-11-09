@@ -3,6 +3,7 @@ A simple USB Serial IO example with the STM32F103 on the Bluepill using the GCC 
 
 Toolchain is installed with:
 
+- sudo apt install build-essential
 - sudo apt install gcc-arm-none-eabi
 - sudo apt install stlink-tools
 
