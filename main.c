@@ -3,7 +3,7 @@
 **
 ** Written by Tomas Stenlund, Stenlund Open Source Group, 2019
 **
-** Example code to demonstrate serioal io with a USB CDC ACM.
+** Example code to demonstrate serial io with a USB CDC ACM.
 **
 */
 
@@ -22,15 +22,15 @@ int main(void)
 {
     char buf[100];
 
-	/* Set up system clocks and counters */
-	rcc_clock_setup_in_hse_8mhz_out_72mhz();
-	rcc_periph_clock_enable(RCC_GPIOA);
+    /* Set up system clocks and counters */
+    rcc_clock_setup_in_hse_8mhz_out_72mhz();
+    rcc_periph_clock_enable(RCC_GPIOA);
 
     /* Init system tick counter */
-	delay_init();
+    delay_init();
 
-	/* Init the USB */
-	usb_init ();
+    /* Init the USB */
+    usb_init ();
 
     /* Wait for connection */
     usb_wait_for_connection();
