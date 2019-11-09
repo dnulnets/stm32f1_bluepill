@@ -282,6 +282,25 @@ static void usb_data_rx_cb(usbd_device *usbd_dev, uint8_t ep)
 }
 
 /*
+** Wait for a character
+*/
+int usb_getch(void)
+{
+	/* Are we closed? */
+	if (!usb_connected)
+		return USB_EOF;
+	
+	/* Wait for a character */
+	while (rix_in == rix_out)
+		__asm__("nop");
+
+	/* Get the character */
+	int ch = (int)(usbd_receive_buffer[rix_out]);
+	rix_out = (rix_out + 1) % USB_RING_BUFFER_LENGTH;
+	return ch;
+}
+
+/*
 ** raw reading until CR
 */
 void usb_readln (void *data, uint32_t size)

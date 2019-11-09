@@ -37,11 +37,15 @@ int main(void)
     sio_write ("STM32F Started\r\n");
 
     /* Simple loop */
+    uint16_t n = 0;
     while (true) {
         sio_write ("Enter something : ");
         sio_readln (buf, 100);
         sio_write ("\r\nWe got '");
         sio_write (buf);
         sio_write ("'\r\n");
+        sio_write_hex16 (n);
+        sio_write ("\r\n");
+        n++;
     }
 }

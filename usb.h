@@ -8,8 +8,10 @@
 */
 #pragma once
 
+#define USB_EOF (-1)
+
 void usb_send(const void *data, uint32_t len);
 void usb_readln(void *data, uint32_t len);
 void usb_init(void);
 void usb_wait_for_connection (void);
-
+int usb_getch(void);
