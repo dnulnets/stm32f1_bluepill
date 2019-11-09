@@ -13,7 +13,7 @@ The last bullet is not neede to be able to build the example, it is to set up a 
 Also download and build [![libopencm3](https://github.com/libopencm3/libopencm3)].
 
 ## Setting up the system
-On linux the ModemManager tries to determine what kind of modem is attached to /dev/ttyACM0 when you insert Bluepill. You need to add a udev rule to blacklist it from the ModemManager and you must make sure it runs in paranoid mode. See [![Setting up udev rules](https://linux-tips.com/t/prevent-modem-manager-to-capture-usb-serial-devices/284)].
+On linux the ModemManager tries to determine what kind of modem is attached to /dev/ttyACM0 when you insert Bluepill. You need to add a udev rule to blacklist it from the ModemManager and you must make sure it runs in paranoid mode. See https://linux-tips.com/t/prevent-modem-manager-to-capture-usb-serial-devices/284 .
 
 
 This example contains a very simple makefile and do not contain any fancy stuff in it so you have to go into the makefile and make sure that **LIBDIR** and **INCDIR** points to your compiled libopencm3 (done before). After that you can build the example and flash the Bluepill.
