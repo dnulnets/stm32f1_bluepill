@@ -6,6 +6,9 @@ Toolchain is installed with:
 - sudo apt install build-essential
 - sudo apt install gcc-arm-none-eabi
 - sudo apt install stlink-tools
+- sudo apt-get install openocd gdb-multiarch
+
+The last bullet is not neede to be able to build the example, it is to set up a debug environment with gdb and the make targets for debugging.
 
 Also download and build [![libopencm3](https://github.com/libopencm3/libopencm3)].
 
