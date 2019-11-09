@@ -46,6 +46,8 @@ int main(void)
         sio_write ("'\r\n");
         sio_write_hex16 (n);
         sio_write ("\r\n");
+        sio_write_dec16 (n);
+        sio_write ("\r\n");
         n++;
     }
 }
